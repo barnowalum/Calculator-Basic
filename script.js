@@ -1,24 +1,22 @@
-document.addEventListener('DOMContentLoaded', function() {
+function appendToDisplay(value) {
     const display = document.getElementById('display');
-    const buttons = document.querySelectorAll('button');
+    display.value += value;
+}
 
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            if (button.textContent === '=') {
-                try {
-                    display.value = eval(display.value);
-                } catch (error) {
-                    display.value = 'Error';
-                }
-            } else if (button.textContent === 'C') {
-                display.value = '';
-            } else {
-                display.value += button.textContent;
-            }
-        });
-    });
+function clearDisplay() {
+    document.getElementById('display').value = '';
+}
 
-    function backspace() {
-        display.value = display.value.slice(0, -1);
+function backspace() {
+    const display = document.getElementById('display');
+    display.value = display.value.slice(0, -1);
+}
+
+function computeResult() {
+    const display = document.getElementById('display');
+    try {
+        display.value = eval(display.value);
+    } catch (e) {
+        display.value = 'Error';
     }
-});
+}
