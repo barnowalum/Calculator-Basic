@@ -60,11 +60,6 @@ button:hover {
     grid-column: span 2;
 }
 
-.zero {
-    padding:10px;
-    grid-column: span 2;
-}
-
 .clear {
     grid-column: span 2;
 }
