@@ -36,8 +36,10 @@ function computeResult() {
         display.value = eval(display.value);
     } catch (e) {
         display.value = 'Error';
-    } finally {
+    }
+    if(display.value == 'undefined'){
         display.value = 0;
     }
     lastChar = display.value; // Update lastChar with the result
+    
 }
