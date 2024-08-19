@@ -36,6 +36,8 @@ function computeResult() {
         display.value = eval(display.value);
     } catch (e) {
         display.value = 'Error';
+    } finally {
+        display.value = 0;
     }
     lastChar = display.value; // Update lastChar with the result
 }
