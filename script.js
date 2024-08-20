@@ -1,8 +1,6 @@
 let lastChar = ''; // To keep track of the last character added
 let dvd = document.getElementsByClassName('dvd')[0];
 let tms = document.getElementsByClassName('tms')[0];
-tms = '*'
-dvd = '/'
 
 function appendToDisplay(value) {
     const display = document.getElementById('display');
