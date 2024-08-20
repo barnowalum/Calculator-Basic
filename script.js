@@ -18,6 +18,7 @@ function appendToDisplay(value) {
 
 function clearDisplay() {
     document.getElementById('display').value = '';
+    document.getElementById('display2').value = '';
     lastChar = ''; // Reset lastChar
 }
 
@@ -30,12 +31,13 @@ function backspace() {
 }
 
 function computeResult() {
-    const display = document.getElementById('display2');
+    const display = document.getElementById('display');
+    const display2 = document.getElementById('display2');
     try {
         // Evaluate the expression
-        display.value = eval(display.value);
+        display2.value = eval(display.value);
     } catch (e) {
-        display.value = 'Error';
+        display2.value = 'Error';
     }
     if(display.value == 'undefined'){
         display.value = 0;
