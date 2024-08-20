@@ -18,12 +18,12 @@ body {
 
 #display {
     width: calc(100% - 10px);
-    height: 100px;
+    height: 70px;
     font-size: 2em;
     text-align: right;
     padding: 5px;
     margin-top: 20px;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
     border: none;
     outline: none;
     background-color: #444;
