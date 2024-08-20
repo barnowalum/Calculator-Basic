@@ -5,12 +5,12 @@ body {
     height: 100vh;
     padding: 0px;
     margin: auto;
-    background-color: #000;
+    background-color: #222;
     font-family: Arial, sans-serif;
 }
 
 .calculator {
-    background-color: #000;
+    background-color: #222;
     padding: 10px;
     width: 100%;
     margin: auto;
