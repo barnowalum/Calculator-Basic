@@ -1,11 +1,15 @@
 let lastChar = ''; // To keep track of the last character added
+let dvd = document.createElement('span');
+dvd.textContent = '&#247';
+let tms = document.createElement('span');
+tms.textContent = '&#215';
 
 function appendToDisplay(value) {
     const display = document.getElementById('display');
     
-    if (['+', '-', '*', '/'].includes(value)) {
+    if (['+', '-', tms, dvd].includes(value)) {
         // Replace the last operator if the new value is an operator
-        if (['+', '-', '*', '/'].includes(lastChar)) {
+        if (['+', '-', tms, dvd].includes(lastChar)) {
             display.value = display.value.slice(0, -1);
         }
         display.value += value;
