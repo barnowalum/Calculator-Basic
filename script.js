@@ -1,6 +1,6 @@
 let lastChar = ''; // To keep track of the last character added
-let dvd = document.getElementById('dvd');
-let tms = document.getElementById('tms');
+let dvd = document.getElementsByClassName('dvd');
+let tms = document.getElementsByClassName('tms');
 
 function appendToDisplay(value) {
     const display = document.getElementById('display');
@@ -39,8 +39,8 @@ function computeResult() {
     const display2 = document.getElementById('display2');
     try {
         // Evaluate the expression
-        let tms = '*'
-        let dvd = '/'
+        tms = '*'
+        dvd = '/'
         display2.value = eval(display.value);
     } catch (e) {
         display2.value = 'Error';
