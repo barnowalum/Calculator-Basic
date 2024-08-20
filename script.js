@@ -1,12 +1,10 @@
 let lastChar = ''; // To keep track of the last character added
-let dvd = document.getElementsByClassName('dvd')[0];
-let tms = document.getElementsByClassName('tms')[0];
 
 function appendToDisplay(value) {
     const display = document.getElementById('display');
-    if (['+', '-', tms, dvd].includes(value)) {
+    if (['+', '-', '×', '÷'].includes(value)) {
         // Replace the last operator if the new value is an operator
-        if (['+', '-', tms, dvd].includes(lastChar)) {
+        if (['+', '-', '×', '÷'].includes(lastChar)) {
             display.value = display.value.slice(0, -1);
         }
         display.value += value;
@@ -40,7 +38,6 @@ function computeResult() {
         display2.value = eval(display.value);
     } catch (e) {
         display2.value = 'Error';
-        console.log(e)
     }
     if(display2.value == 'undefined'){
         display2.value = '';
