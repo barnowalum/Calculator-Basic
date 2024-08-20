@@ -4,7 +4,8 @@ let tms = document.getElementById('tms');
 
 function appendToDisplay(value) {
     const display = document.getElementById('display');
-    
+    tms = '*'
+    dvd = '/'
     if (['+', '-', tms, dvd].includes(value)) {
         // Replace the last operator if the new value is an operator
         if (['+', '-', tms, dvd].includes(lastChar)) {
