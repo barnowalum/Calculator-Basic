@@ -40,7 +40,7 @@ function computeResult() {
         display2.value = 'Error';
     }
     if(display2.value == 'undefined'){
-        display.value = '';
+        display2.value = '';
     }
     lastChar = display.value; // Update lastChar with the result
     
