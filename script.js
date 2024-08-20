@@ -38,6 +38,8 @@ function computeResult() {
     const display2 = document.getElementById('display2');
     try {
         // Evaluate the expression
+        let tms = '*'
+        let dvd = '/'
         display2.value = eval(display.value);
     } catch (e) {
         display2.value = 'Error';
