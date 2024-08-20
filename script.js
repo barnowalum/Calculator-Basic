@@ -44,6 +44,7 @@ function computeResult() {
         display2.value = eval(display.value);
     } catch (e) {
         display2.value = 'Error';
+        console.log(e)
     }
     if(display2.value == 'undefined'){
         display2.value = '';
