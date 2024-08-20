@@ -31,12 +31,13 @@ function backspace() {
 }
 
 function computeResult() {
-    const display = document.getElementById('display').value;
+    const display = document.getElementById('display');
     const display2 = document.getElementById('display2');
-    display = display.replace(/×/g, '*').replace(/÷/g, '/');
+    let expression = display.value;
+    expression = expression.replace(/×/g, '*').replace(/÷/g, '/');
     try {
         // Evaluate the expression
-        display2.value = eval(display);
+        display2.value = eval(expression);
     } catch (e) {
         display2.value = 'Error';
     }
