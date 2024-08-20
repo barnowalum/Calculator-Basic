@@ -30,7 +30,7 @@ function backspace() {
 }
 
 function computeResult() {
-    const display = document.getElementById('display');
+    const display = document.getElementById('display2');
     try {
         // Evaluate the expression
         display.value = eval(display.value);
