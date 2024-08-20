@@ -38,7 +38,7 @@ function computeResult() {
         display.value = 'Error';
     }
     if(display.value == 'undefined'){
-        display.value = 0;
+        display.value = '';
     }
     lastChar = display.value; // Update lastChar with the result
     
