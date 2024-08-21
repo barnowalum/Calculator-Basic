@@ -58,22 +58,23 @@ button {
     padding: 20px 10px;
     border: none;
     border-radius: 5px;
-    background-color: #555;
+    background-color: #111;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #777;
+    background-color: #000;
 }
 
 .operator {
-    background-color: #f44336; /* red */
+    color: #f44336;
+    background-color: #111;
 }
 
 .operator:hover {
-    background-color: #f44336; /* red */
+    background-color: #000; /* red */
 }
 
 .eql {
