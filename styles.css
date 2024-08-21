@@ -4,7 +4,6 @@ body {
     align-items: center;
     height: 100vh;
     padding: 0px;
-    padding-bottom: -100%;
     margin: auto;
     background-color: #222;
     font-family: Arial, sans-serif;
@@ -23,7 +22,7 @@ body {
     font-size: 2em;
     text-align: right;
     padding: 15px 7px 0 7px;
-    margin-top: 20px;
+    margin-top: 40px;
     border: none;
     outline: none;
     background-color: #333;
