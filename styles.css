@@ -70,7 +70,8 @@ button:hover {
 }
 
 .operator {
-    font-size: 2.2em; 
+    font-size: 2.2em;
+    font-weight: 450;
     color: #f44336;
     background-color: rgba(1,1,1,.4); 
     box-shadow: 0 0 4px #000;
