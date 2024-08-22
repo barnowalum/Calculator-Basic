@@ -73,7 +73,6 @@ button:hover {
     font-size: 2.3em;
     font-weight: 450;
     color: cyan;
-    box-shadow: 0 0 4px #000;
     transition: background-color 0.3s ease;
 }
 
@@ -83,7 +82,6 @@ button:hover {
 
 .bckspc {
     font-size: 1.55em;
-    font-weight: 450;
 }
 
 .eql {
@@ -92,4 +90,5 @@ button:hover {
 
 .clear {
     grid-column: span 2;
+    font-size: 2em; 
 }
