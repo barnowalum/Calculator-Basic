@@ -70,10 +70,9 @@ button:hover {
 }
 
 .operator {
-    font-size: 2.2em;
+    font-size: 2.5em;
     font-weight: 450;
     color: blue;
-    background-color: rgba(1,1,1,.4); 
     box-shadow: 0 0 4px #000;
     transition: background-color 0.3s ease;
 }
@@ -84,6 +83,7 @@ button:hover {
 
 .bckspc {
     font-size: 1.55em;
+    font-weight: 450;
 }
 
 .eql {
