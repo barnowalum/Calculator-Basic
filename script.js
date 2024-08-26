@@ -41,6 +41,7 @@ function computeResult() {
     } catch (e) {
         display2.value = 'Error';
     }
+
     if(display2.value == 'undefined'){
         display2.value = '';
     }
