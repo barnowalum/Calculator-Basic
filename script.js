@@ -38,7 +38,8 @@ function computeResult() {
     expression = handlePercentages(expression);
     try {
         // Evaluate the expression
-        display2.value = eval(expression);
+        display2.value = eval(expression).toFixed(4);
+        
     } catch (e) {
         display2.value = 'Error';
     }
