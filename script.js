@@ -2,10 +2,9 @@ let lastChar = ''; // To keep track of the last character added
 
 function appendToDisplay(value) {
     const display = document.getElementById('display');
-    
-    if (['+', '-', '*', '/'].includes(value)) {
+    if (['+', '-', '×', '÷'].includes(value)) {
         // Replace the last operator if the new value is an operator
-        if (['+', '-', '*', '/'].includes(lastChar)) {
+        if (['+', '-', '×', '÷'].includes(lastChar)) {
             display.value = display.value.slice(0, -1);
         }
         display.value += value;
@@ -18,6 +17,7 @@ function appendToDisplay(value) {
 
 function clearDisplay() {
     document.getElementById('display').value = '';
+    document.getElementById('display2').value = '';
     lastChar = ''; // Reset lastChar
 }
 
@@ -27,18 +27,23 @@ function backspace() {
         display.value = display.value.slice(0, -1);
         lastChar = display.value.slice(-1); // Update lastChar
     }
+    document.getElementById('display2').value = '';
 }
 
 function computeResult() {
     const display = document.getElementById('display');
+    const display2 = document.getElementById('display2');
+    let expression = display.value;
+    expression = expression.replace(/×/g, '*').replace(/÷/g, '/');
     try {
         // Evaluate the expression
-        display.value = eval(display.value);
+        display2.value = eval(expression);
     } catch (e) {
-        display.value = 'Error';
+        display2.value = 'Error';
     }
-    if(display.value == 'undefined'){
-        display.value = '';
+
+    if(display2.value == 'undefined'){
+        display2.value = '';
     }
     lastChar = display.value; // Update lastChar with the result
     
