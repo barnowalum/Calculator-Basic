@@ -35,9 +35,7 @@ function computeResult() {
     const display2 = document.getElementById('display2');
     let expression = display.value;
     expression = expression.replace(/×/g, '*').replace(/÷/g, '/');
-    expression = expression.replace(/(\d+(\.\d+)?)%/g, (match, p1) => {
-        return `(${p1} / 100)`;
-    });
+    expression = expression.replace(/%/g, '/100');
     try {
         // Evaluate the expression
         display2.value = eval(expression);
