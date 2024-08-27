@@ -41,7 +41,7 @@ function computeResult() {
 
         if (typeof result === 'number') {
             if (result % 1 !== 0) {
-                result = result.toFixed(2);
+                result = Math.round(result * 100) / 100;
             }
         }
 
