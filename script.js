@@ -35,7 +35,10 @@ function computeResult() {
     const display2 = document.getElementById('display2');
     let expression = display.value;
     expression = expression.replace(/×/g, '*').replace(/÷/g, '/');
-    expression = handlePercentages(expression);
+    //expression = handlePercentages(expression);
+    expression = expression.replace(/(\d+\.?\d*)%(\d+\.?\d*)/g, (match, num1, num2) => {
+        return (parseFloat(num1) * (parseFloat(num2) / 100)).toString();
+    });
     try {
         // Evaluate the expression
         display2.value = eval(expression);
@@ -49,8 +52,8 @@ function computeResult() {
     lastChar = display.value; // Update lastChar with the result 
 }
 
-function handlePercentages(expression) {
+//function handlePercentages(expression) {
     // Convert percentage expressions to decimal
-    return expression.replace(/(\d+)%(\d+)/g, '($1 * $2) / 100')
-                     .replace(/(\d+)%/g, '$1 / 100');
-}
+   // return expression.replace(/(\d+)%(\d+)/g, '($1 * $2) / 100')
+                    // .replace(/(\d+)%/g, '$1 / 100');
+//}
