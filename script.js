@@ -2,9 +2,9 @@ let lastChar = ''; // To keep track of the last character added
 
 function appendToDisplay(value) {
     const display = document.getElementById('display');
-    if (['+', '-', '×', '÷', '%'].includes(value)) {
+    if (['+', '-', '×', '÷'].includes(value)) {
         // Replace the last operator if the new value is an operator
-        if (['+', '-', '×', '÷', '%'].includes(lastChar)) {
+        if (['+', '-', '×', '÷'].includes(lastChar)) {
             display.value = display.value.slice(0, -1);
         }
         display.value += value;
