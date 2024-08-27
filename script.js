@@ -36,12 +36,16 @@ function computeResult() {
     let expression = display.value;
     expression = expression.replace(/×/g, '*').replace(/÷/g, '/');
     expression = handlePercentages(expression);
-    //expression = expression.replace(/(\d+\.?\d*)%(\d+\.?\d*)/g, (match, num1, num2) => {
-        //return (parseFloat(num1) * (parseFloat(num2) / 100)).toString();
-    //});
     try {
-        // Evaluate the expression
-        display2.value = eval(expression);
+        let result = eval(expression);
+
+        if (typeof result === 'number') {
+            if (result % 1 !== 0) {
+                result = result.toFixed(2);
+            }
+        }
+
+        display2.value = result;
     } catch (e) {
         display2.value = 'Error';
     }
